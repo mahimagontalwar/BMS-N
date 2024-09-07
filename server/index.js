@@ -22,3 +22,11 @@ app.use('/api/shows',showRoutes);
 app.listen(8081,()=>{
     console.log("server is connected");
 })
+
+const PORT=process.env.PORT || 8081
+
+const path=require("path");
+
+__dirname=path.resolve();
+
+app.use(express.static('./public'))

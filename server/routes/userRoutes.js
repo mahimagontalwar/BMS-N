@@ -52,7 +52,7 @@ router.post('/login', async (req, res) => {
         return
      }
 
-     const token =jwt.sign({userId:user._id},"Scaler_BMS",{
+     const token =jwt.sign({userId:user._id},process.env.SECRET_KEY,{
         expiresIn:"1d",
      })
      
